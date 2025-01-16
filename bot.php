@@ -113,7 +113,6 @@ $ic_badwords = $ooc_badwords = [
     ['word' => 'beaner',      'duration' => '999 years',  'reason' => 'Racism and Discrimination.', 'category' => 'racism/discrimination', 'method' => 'str_contains', 'warnings' => 1],
     ['word' => 'chink',       'duration' => '999 years',  'reason' => 'Racism and Discrimination.', 'category' => 'racism/discrimination', 'method' => 'str_contains', 'warnings' => 1],
     ['word' => 'coon',        'duration' => '999 years',  'reason' => 'Racism and Discrimination.', 'category' => 'racism/discrimination', 'method' => 'exact', 'warnings' => 1],
-    ['word' => 'fag',         'duration' => '999 years',  'reason' => 'Racism and Discrimination.', 'category' => 'racism/discrimination', 'method' => 'str_contains', 'warnings' => 1],
     ['word' => 'gook',        'duration' => '999 years',  'reason' => 'Racism and Discrimination.', 'category' => 'racism/discrimination', 'method' => 'str_contains', 'warnings' => 1],
     ['word' => 'kike',        'duration' => '999 years',  'reason' => 'Racism and Discrimination.', 'category' => 'racism/discrimination', 'method' => 'str_contains', 'warnings' => 1],
     ['word' => 'nigg',        'duration' => '999 years',  'reason' => 'Racism and Discrimination.', 'category' => 'racism/discrimination', 'method' => 'str_contains', 'warnings' => 1],
@@ -122,7 +121,6 @@ $ic_badwords = $ooc_badwords = [
     ['word' => 'tranny',      'duration' => '999 years',  'reason' => 'Racism and Discrimination.', 'category' => 'racism/discrimination', 'method' => 'str_contains', 'warnings' => 1],
 
     ['word' => 'cunt',        'duration' => '1 minute',  'reason' => 'You must not be toxic or too agitated in any OOC communication channels.', 'category' => 'toxic', 'method' => 'exact', 'warnings' => 5],
-    ['word' => 'retard',      'duration' => '1 minute',  'reason' => 'You must not be toxic or too agitated in any OOC communication channels.', 'category' => 'toxic', 'method' => 'exact', 'warnings' => 5],
     ['word' => 'stfu',        'duration' => '1 minute',  'reason' => 'You must not be toxic or too agitated in any OOC communication channels.', 'category' => 'toxic', 'method' => 'exact', 'warnings' => 5],
     ['word' => 'kys',         'duration' => '1 week',    'reason' => 'You must not be toxic or too agitated in any OOC communication channels.', 'category' => 'toxic', 'method' => 'exact', 'warnings' => 1], // This is more severe than the others, so ban after only one warning
 
@@ -133,10 +131,7 @@ $ic_badwords = $ooc_badwords = [
 
     ['word' => 'discord.gg',  'duration' => '999 years', 'reason' => 'You must not post unauthorized Discord invitation links in any OOC communication channels.', 'category' => 'advertisement', 'method' => 'str_contains', 'warnings' => 2],
     ['word' => 'discord.com', 'duration' => '999 years', 'reason' => 'You must not post unauthorized Discord invitation links in any OOC communication channels.', 'category' => 'advertisement', 'method' => 'str_contains', 'warnings' => 2],
-    
-    ['word' => 'RU',          'duration' => '999 years', 'reason' => 'только английский.', 'category' => 'language', 'method' => 'russian',  'warnings' => 2],
-    ['word' => 'CN',          'duration' => '999 years', 'reason' => '仅英语.',             'category' => 'language', 'method' => 'chinese',  'warnings' => 2],
-    ['word' => 'KR',          'duration' => '999 years', 'reason' => '영어로만 제공.',       'category' => 'language', 'method' => 'korean',   'warnings' => 2],
+	
 ];
 $options = array(
     'github' => 'https://github.com/New-Civ13/Civilizationbot',
