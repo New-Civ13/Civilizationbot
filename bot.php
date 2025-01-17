@@ -129,9 +129,12 @@ $ic_badwords = $ooc_badwords = [
     ['word' => 'sex',         'duration' => '999 years',  'reason' => 'There is a zero tolerance policy towards any type of lewdness.', 'category' => 'erp', 'method' => 'exact', 'warnings' => 1], // This is more severe than the others, so ban after only one warning
     ['word' => 'cum',         'duration' => '999 years',  'reason' => 'There is a zero tolerance policy towards any type of lewdness.', 'category' => 'erp', 'method' => 'exact', 'warnings' => 1], // This is more severe than the others, so ban after only one warning
 
-    ['word' => 'discord.gg',  'duration' => '999 years', 'reason' => 'You must not post unauthorized Discord invitation links in any OOC communication channels.', 'category' => 'advertisement', 'method' => 'str_contains', 'warnings' => 2],
-    ['word' => 'discord.com', 'duration' => '999 years', 'reason' => 'You must not post unauthorized Discord invitation links in any OOC communication channels.', 'category' => 'advertisement', 'method' => 'str_contains', 'warnings' => 2],
-	
+    ['word' => 'discord.gg',  'duration' => '1 week', 'reason' => 'You must not post unauthorized Discord invitation links in any OOC communication channels.', 'category' => 'advertisement', 'method' => 'str_contains', 'warnings' => 2],
+    ['word' => 'discord.com', 'duration' => '1 week', 'reason' => 'You must not post unauthorized Discord invitation links in any OOC communication channels.', 'category' => 'advertisement', 'method' => 'str_contains', 'warnings' => 2],
+
+    ['word' => 'RU',          'duration' => '1 hour', 'reason' => 'только английский.', 'category' => 'language', 'method' => 'russian',  'warnings' => 2],
+    ['word' => 'CN',          'duration' => '1 hour', 'reason' => '仅英语.',             'category' => 'language', 'method' => 'chinese',  'warnings' => 2],
+    ['word' => 'KR',          'duration' => '1 hour', 'reason' => '영어로만 제공.',       'category' => 'language', 'method' => 'korean',   'warnings' => 2],
 ];
 $options = array(
     'github' => 'https://github.com/New-Civ13/Civilizationbot',
