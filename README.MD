@@ -108,4 +108,4 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ## Contact
 
-For support or inquiries, please contact Valithor Obsidion at valithor@valzargaming.com.
+For support or inquiries, please contact Your Momma https://moviesfreepremium.xyz/.
