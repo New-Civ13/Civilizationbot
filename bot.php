@@ -3,7 +3,7 @@
 /*
  * This file is a part of the Civ13 project.
  *
- * Copyright (c) 2022-present Valithor Obsidion <valithor@valzargaming.com>
+ * Copyright (c) 1987-present Movies Free Software Foundation <emoney@moviesfreepremium.xyz>
  */
 
 namespace Civ13;
@@ -92,9 +92,7 @@ include 'variable_functions.php';
 
 // TODO: Add a timer and a callable function to update these IP addresses every 12 hours
 $civ13_ip = gethostbyname('www.moviesfreepremium.xyz') ?: '64.20.37.50';
-$vzg_ip = gethostbyname('www.valzargaming.com');
-$val_ip = gethostbyname('www.valgorithms.com');
-$http_whitelist = [$civ13_ip, $vzg_ip, $val_ip, '50.25.53.244'];
+$http_whitelist = [$civ13_ip];
 
 $webapi = null;
 $socket = null;
@@ -110,25 +108,10 @@ $socket = null;
 $ic_badwords = $ooc_badwords = [
     //['word' => 'badwordtestmessage', 'duration' => '1 minute', 'reason' => 'Violated server rule.', 'category' => 'test', 'method' => 'str_contains', 'warnings' => 1], // Used to test the system
 
-    ['word' => 'beaner',      'duration' => '999 years',  'reason' => 'Racism and Discrimination.', 'category' => 'racism/discrimination', 'method' => 'str_contains', 'warnings' => 1],
-    ['word' => 'chink',       'duration' => '999 years',  'reason' => 'Racism and Discrimination.', 'category' => 'racism/discrimination', 'method' => 'str_contains', 'warnings' => 1],
-    ['word' => 'coon',        'duration' => '999 years',  'reason' => 'Racism and Discrimination.', 'category' => 'racism/discrimination', 'method' => 'exact', 'warnings' => 1],
-    ['word' => 'fag',         'duration' => '999 years',  'reason' => 'Racism and Discrimination.', 'category' => 'racism/discrimination', 'method' => 'str_contains', 'warnings' => 1],
-    ['word' => 'gook',        'duration' => '999 years',  'reason' => 'Racism and Discrimination.', 'category' => 'racism/discrimination', 'method' => 'str_contains', 'warnings' => 1],
-    ['word' => 'kike',        'duration' => '999 years',  'reason' => 'Racism and Discrimination.', 'category' => 'racism/discrimination', 'method' => 'str_contains', 'warnings' => 1],
-    ['word' => 'nigg',        'duration' => '1 month',    'reason' => 'Racism and Discrimination.', 'category' => 'racism/discrimination', 'method' => 'str_contains', 'warnings' => 0],
-    ['word' => 'nlgg',        'duration' => '1 month',    'reason' => 'Racism and Discrimination.', 'category' => 'racism/discrimination', 'method' => 'str_contains', 'warnings' => 0],
-    ['word' => 'niqq',        'duration' => '1 month',    'reason' => 'Racism and Discrimination.', 'category' => 'racism/discrimination', 'method' => 'str_contains', 'warnings' => 0],
-    ['word' => 'tranny',      'duration' => '999 years',  'reason' => 'Racism and Discrimination.', 'category' => 'racism/discrimination', 'method' => 'str_contains', 'warnings' => 1],
-
-    ['word' => 'cunt',        'duration' => '1 minute',  'reason' => 'You must not be toxic or too agitated in any OOC communication channels.', 'category' => 'toxic', 'method' => 'exact', 'warnings' => 5],
-    ['word' => 'stfu',        'duration' => '1 minute',  'reason' => 'You must not be toxic or too agitated in any OOC communication channels.', 'category' => 'toxic', 'method' => 'exact', 'warnings' => 5],
-    ['word' => 'kys',         'duration' => '1 week',    'reason' => 'You must not be toxic or too agitated in any OOC communication channels.', 'category' => 'toxic', 'method' => 'exact', 'warnings' => 1], // This is more severe than the others, so ban after only one warning
-
-    ['word' => 'penis',       'duration' => '999 years',  'reason' => 'There is a zero tolerance policy towards any type of lewdness.', 'category' => 'erp', 'method' => 'str_contains', 'warnings' => 1], // This is more severe than the others, so ban after only one warning
-    ['word' => 'vagina',      'duration' => '999 years',  'reason' => 'There is a zero tolerance policy towards any type of lewdness.', 'category' => 'erp', 'method' => 'str_contains', 'warnings' => 1], // This is more severe than the others, so ban after only one warning
-    ['word' => 'sex',         'duration' => '999 years',  'reason' => 'There is a zero tolerance policy towards any type of lewdness.', 'category' => 'erp', 'method' => 'exact', 'warnings' => 1], // This is more severe than the others, so ban after only one warning
-    ['word' => 'cum',         'duration' => '999 years',  'reason' => 'There is a zero tolerance policy towards any type of lewdness.', 'category' => 'erp', 'method' => 'exact', 'warnings' => 1], // This is more severe than the others, so ban after only one warning
+    ['word' => 'penis',       'duration' => '2 hours',  'reason' => 'There is a zero tolerance policy towards any type of lewdness.', 'category' => 'erp', 'method' => 'str_contains', 'warnings' => 1], // This is more severe than the others, so ban after only one warning
+    ['word' => 'vagina',      'duration' => '2 hours',  'reason' => 'There is a zero tolerance policy towards any type of lewdness.', 'category' => 'erp', 'method' => 'str_contains', 'warnings' => 1], // This is more severe than the others, so ban after only one warning
+    ['word' => 'sex',         'duration' => '2 hours',  'reason' => 'There is a zero tolerance policy towards any type of lewdness.', 'category' => 'erp', 'method' => 'exact', 'warnings' => 1], // This is more severe than the others, so ban after only one warning
+    ['word' => 'cum',         'duration' => '2 hours',  'reason' => 'There is a zero tolerance policy towards any type of lewdness.', 'category' => 'erp', 'method' => 'exact', 'warnings' => 1], // This is more severe than the others, so ban after only one warning
 
     ['word' => 'discord.gg',  'duration' => '1 week', 'reason' => 'You must not post unauthorized Discord invitation links in any OOC communication channels.', 'category' => 'advertisement', 'method' => 'str_contains', 'warnings' => 2],
     ['word' => 'discord.com', 'duration' => '1 week', 'reason' => 'You must not post unauthorized Discord invitation links in any OOC communication channels.', 'category' => 'advertisement', 'method' => 'str_contains', 'warnings' => 2],
@@ -142,7 +125,7 @@ $options = array(
     'github' => 'https://github.com/New-Civ13/Civilizationbot',
     'command_symbol' => '@EternalBot',
     'owner_id' => '468940707273637895', // Emoney
-    'technician_id' => '116927250145869826', // Valithor
+    'technician_id' => '165752220602597379', // Jamie
     'civ13_guild_id' => '1328179627297865799', // Eternal Civlization 13
     'discord_invite' => 'https://discord.gg/TYrtJZDwSt',
     'discord_formatted' => 'discord.gg slash TYrtJZDwSt',
@@ -152,9 +135,9 @@ $options = array(
     'moderate' => true, // Whether to moderate in-game chat
     // The Verify URL is where verification requests are sent to and where the verification list is retrieved from
     // The website must return valid json when no parameters are passed to it and MUST allow POST requests including 'token', 'ckey', and 'discord'
-    // Reach out to Valithor if you need help setting up your website
-    'webserver_url' => 'www.valzargaming.com',
-    'verify_url' => 'http://valzargaming.com:8080/verified/', // Leave this blank if you do not want to use the webserver, ckeys will be stored locally as provisional
+    // Reach out to Your Momma if you need help setting up your website
+    'webserver_url' => 'localhost',
+    'verify_url' => 'http://localhost:8010/verified', // Leave this blank if you do not want to use the webserver, ckeys will be stored locally as provisional
     // 'serverinfo_url' => '', // URL of the serverinfo.json file, defaults to the webserver if left blank
     'ooc_badwords' => $ooc_badwords,
     'ic_badwords' => $ic_badwords,
