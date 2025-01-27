@@ -37,9 +37,9 @@ class OSFunctions
     
     private static function readPipes(array &$pipes)
     {
-        if ($stdin = fread($pipes[0], 4096)) error_log("StdIn: $stdin");
-        if ($stdout = fread($pipes[1], 4096)) error_log("StdOut: $stdout");
-        if ($stderr = fread($pipes[2], 4096)) error_log("StdErr: $stderr");
+        if (is_resource($pipes[0]) && $stdin = fread($pipes[0], 4096)) error_log("StdIn: $stdin");
+        if (is_resource($pipes[1]) && $stdout = fread($pipes[1], 4096)) error_log("StdOut: $stdout");
+        if (is_resource($pipes[2]) && $stderr = fread($pipes[2], 4096)) error_log("StdErr: $stderr");
     }
 
     /**
